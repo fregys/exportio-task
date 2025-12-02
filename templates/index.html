@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exportio Base Linker Service</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script defer src="{% static 'js/helpers.js' %}"></script>
+    <script defer src="{% static 'js/app.js' %}"></script>
+    <script defer src="{% static 'js/filter.js' %}"></script>
+    <script defer src="{% static 'js/api.js' %}"></script>
+</head>
+<body>
+    <header>
+        <h1>Exportio Base Linker Service</h1>
+    </header>
+    
+    <main>
+        <div class="panel">
+            <div class="panel-header">
+                <span class="panel-title">Inventories</span>
+                <button class="btn" id="loadInventories">Load</button>
+            </div>
+            <input type="text" class="search-input" id="inventorySearch" placeholder="Search inventories...">
+            <div id="inventoriesContainer" class="empty-state">Click "Load" to fetch inventories</div>
+        </div>
+        
+        <div class="panel">
+            <div class="panel-header">
+                <span class="panel-title">Products</span>
+                <span id="selectedInventoryBadge"></span>
+            </div>
+            <input type="text" class="search-input" id="productSearch" placeholder="Search products...">
+            <div id="productsContainer" class="empty-state">Select an inventory</div>
+        </div>
+        
+        <div class="panel">
+            <div class="panel-header">
+                <span class="panel-title">Product Details</span>
+                <span id="selectedProductBadge"></span>
+            </div>
+            <div id="detailContainer" class="empty-state">Select a product</div>
+        </div>
+    </main>
+</body>
+</html>
